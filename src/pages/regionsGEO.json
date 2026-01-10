@@ -1,0 +1,113 @@
+{
+  "Global": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [[
+        [-180, -90],
+        [180, -90],
+        [180, 90],
+        [-180, 90],
+        [-180, -90]
+      ]]
+    }
+  },
+
+  "Northern Hemisphere": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [[
+        [-180, 0],
+        [180, 0],
+        [180, 90],
+        [-180, 90],
+        [-180, 0]
+      ]]
+    }
+  },
+
+  "North America": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [[
+        [-168, 15],
+        [-52, 15],
+        [-52, 72],
+        [-168, 72],
+        [-168, 15]
+      ]]
+    }
+  },
+
+  "Americas": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [[
+        [-170, -60],
+        [-30, -60],
+        [-30, 75],
+        [-170, 75],
+        [-170, -60]
+      ]]
+    }
+  },
+
+  "Europe": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [[
+        [-10, 35],
+        [40, 35],
+        [40, 72],
+        [-10, 72],
+        [-10, 35]
+      ]]
+    }
+  },
+
+  "Asia": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [[
+        [25, -10],
+        [180, -10],
+        [180, 80],
+        [25, 80],
+        [25, -10]
+      ]]
+    }
+  },
+
+  "Pacific": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [[
+        [120, -60],
+        [-110, -60],
+        [-110, 60],
+        [120, 60],
+        [120, -60]
+      ]]
+    }
+  },
+
+  "San Francisco Bay Area": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [[
+        [-123.0, 36.8],
+        [-121.5, 36.8],
+        [-121.5, 38.5],
+        [-123.0, 38.5],
+        [-123.0, 36.8]
+      ]]
+    }
+  }
+}
