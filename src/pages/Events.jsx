@@ -3,13 +3,14 @@ import { Badge } from '../components/ui/badge';
 import { Button } from '../components/ui/button';
 import { Calendar, MapPin, Eye, Clock } from 'lucide-react';
 import { AIExplainButton } from '../components/AIExplainButton';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { VisibilityMap } from './VisibilityMap';
 import { regionsToGeoJSON } from './regionsToGeoJson';
 
 
 export const Events = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
+  const mapRef = useRef(null);
 
   const events = [
     {
@@ -176,7 +177,16 @@ export const Events = () => {
                 {/* Quick Actions */}
                 {selectedEvent !== event.id && (
                   <div className="flex gap-2">
-                    <Button variant="outline" size="sm" className="flex-1 border-primary/30 hover:bg-primary/10">
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="flex-1 border-primary/30 hover:bg-primary/10"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setSelectedEvent(event.id);
+                        mapRef.current?.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                    >
                       <Eye className="w-4 h-4 mr-2" />
                       View Map
                     </Button>
@@ -189,7 +199,7 @@ export const Events = () => {
         </div>
 
         {/* Visibility Map */}
-<div className="mt-12">
+<div className="mt-12" ref={mapRef}>
   <Card className="bg-card/80 backdrop-blur-sm border-primary/20">
     <CardHeader>
       <CardTitle className="text-2xl">Interactive Visibility Map</CardTitle>
