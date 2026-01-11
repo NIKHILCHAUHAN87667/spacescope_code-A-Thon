@@ -13,7 +13,7 @@ export const Home = () => {
           {/* Location Badge */}
           <Badge className="mb-6 bg-muted/50 text-foreground border border-primary/30 px-4 py-2">
             <MapPin className="w-4 h-4 mr-2" />
-            Viewing from: San Francisco, CA
+            Viewing from: Mumbai,India
           </Badge>
 
           {/* Main Heading */}
