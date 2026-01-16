@@ -16,7 +16,7 @@ export const Missions = () => {
   useEffect(() => {
     const fetchMissions = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/missions');
+        const res = await fetch('https://backend-space.vercel.app/api/missions');
         const data = await res.json();
         setMissions(data);
       } catch (err) {
